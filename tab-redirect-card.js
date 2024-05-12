@@ -1,4 +1,4 @@
-class TabRedirectCard extends HTMLElement {
+class TabRedirectCard2 extends HTMLElement {
 	set hass(hass) {
 		this.style.display = 'none';
 		
@@ -24,8 +24,8 @@ class TabRedirectCard extends HTMLElement {
 
 			const keyId = `${config.user}-${config.entity_id}`;
 
-			const lastSeenStateKey = `TabRedirectCard-LastSeenState-${keyId}`;
-			const lastRedirectKey = `TabRedirectCard-LastRedirect-${keyId}`;
+			const lastSeenStateKey = `TabRedirectCard2-LastSeenState-${keyId}`;
+			const lastRedirectKey = `TabRedirectCard2-LastRedirect-${keyId}`;
 
 			// if previous recorded state is different, remove cache
 			if(state !== sessionStorage.getItem(lastSeenStateKey)) {
@@ -67,4 +67,4 @@ class TabRedirectCard extends HTMLElement {
 		this.config = config;
 	}
 }
-customElements.define('tab-redirect-card', TabRedirectCard);
+customElements.define('tab-redirect-card2', TabRedirectCard2);
